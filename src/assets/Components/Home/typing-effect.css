@@ -1,0 +1,32 @@
+
+.typing {
+    overflow: hidden; /* Ensures text doesn't wrap */
+    white-space: nowrap; /* Prevents wrapping */
+    border-right: 3px solid white; /* Creates a cursor effect */
+    animation: caret 0.7s step-end infinite; /* Blinking cursor */
+  }
+  
+  .typing-effect {
+    display: inline-block;
+    width: 0; /* Start with no text */
+    overflow: hidden; /* Hide the text until typing effect plays */
+    animation: typing 3s steps(15, end) forwards; /* Typing animation */
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0; /* Start with no text */
+    }
+    to {
+      width: 100%; /* Full width of the text */
+    }
+  }
+  
+  /* Blinking cursor */
+  @keyframes caret {
+    50% {
+      border-color: transparent; /* Cursor blinks */
+    }
+  }
+  
